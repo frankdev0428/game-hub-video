@@ -4,6 +4,7 @@ import GameGrid from "./component/GameGrid"
 import GenreList from "./component/GenreList"
 import { Genre } from "./hooks/useGenres";
 import { useState } from "react";
+import PlatformSelector from "./component/PlatformSelector";
 
 
 function App() {
@@ -28,6 +29,7 @@ const [selectedGenre , setSelectedGenre] = useState<Genre | null>(null);
         </GridItem>
         </Show>
         <GridItem area='main' >
+         <PlatformSelector />
          <GameGrid selectedGenre={selectedGenre}/>  
         </GridItem>  
       </Grid>
